@@ -9,16 +9,24 @@ word = original.lower()
 first = word[0]
 # if the word is a vowel, this is the output for it
 new_word = word + pyg
+newer_word = new_word[0].upper() + word[1:30] + pyg
 #this if statement makes sure that the name entered isn't empty or has numbers
 if len(original) > 0 and original.isalpha():
   # if first letter starts with a vowel then display the translated word
     if first == 'a' or first == 'e' or first == 'i' or first == 'o' or first == 'u' :
-        print new_word
+        print newer_word
     # if first letter is consonant then display correct translation
     else:
     	# takes the first letter and adds it on the end and also adds 'ay'
         new_word = word[1:260] + word[0:1] + pyg
-        print new_word
+        almost_new = new_word[0].upper() + new_word[1:260]
+        print almost_new
         
 else:
     print 'empty'
+thankyou = raw_input("Is this correct? <Yes/No>")
+if thankyou == "Yes" or thankyou == "yes" or thankyou == "y" or thankyou == "Y":
+	print "Awesome :D"
+else:
+	print "I guess we will work on it :("
+
