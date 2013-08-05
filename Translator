@@ -1,0 +1,24 @@
+# Define the ending to the translator
+pyg = 'ay'
+
+# raw_input displays 'Enter a word' and the input is logged under original
+original = raw_input('Enter a word:')
+# original input is made lowercase
+word = original.lower()
+# the first letter of the name entered
+first = word[0]
+# if the word is a vowel, this is the output for it
+new_word = word + pyg
+#this if statement makes sure that the name entered isn't empty or has numbers
+if len(original) > 0 and original.isalpha():
+  # if first letter starts with a vowel then display the translated word
+    if first == 'a' or first == 'e' or first == 'i' or first == 'o' or first == 'u' :
+        print new_word
+    # if first letter is consonant then display correct translation
+    else:
+    	# takes the first letter and adds it on the end and also adds 'ay'
+        new_word = word[1:260] + word[0:1] + pyg
+        print new_word
+        
+else:
+    print 'empty'
